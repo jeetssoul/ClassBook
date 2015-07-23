@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02C7A2E7A5C421E91F78E90A /* libPods-ClassBook.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF188E431CCD30E0E5711B4A /* libPods-ClassBook.a */; };
 		18795DD31B618D3A0017A390 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18795DD21B618D3A0017A390 /* main.m */; };
 		18795DD61B618D3A0017A390 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18795DD51B618D3A0017A390 /* AppDelegate.m */; };
 		18795DD91B618D3A0017A390 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18795DD81B618D3A0017A390 /* ViewController.m */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		044CEE3C54B7CC45084A851F /* Pods-ClassBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClassBook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClassBook/Pods-ClassBook.debug.xcconfig"; sourceTree = "<group>"; };
 		18795DCD1B618D3A0017A390 /* ClassBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClassBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18795DD11B618D3A0017A390 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18795DD21B618D3A0017A390 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +42,8 @@
 		18795DE61B618D3A0017A390 /* ClassBookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClassBookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18795DEB1B618D3A0017A390 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18795DEC1B618D3A0017A390 /* ClassBookTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassBookTests.m; sourceTree = "<group>"; };
+		72668B5A7C045826ECD009D0 /* Pods-ClassBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClassBook.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClassBook/Pods-ClassBook.release.xcconfig"; sourceTree = "<group>"; };
+		AF188E431CCD30E0E5711B4A /* libPods-ClassBook.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ClassBook.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02C7A2E7A5C421E91F78E90A /* libPods-ClassBook.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +71,8 @@
 				18795DCF1B618D3A0017A390 /* ClassBook */,
 				18795DE91B618D3A0017A390 /* ClassBookTests */,
 				18795DCE1B618D3A0017A390 /* Products */,
+				662678E3807BB01F58123585 /* Pods */,
+				94A0C7424DA09155AA74EA1C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,6 +126,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		662678E3807BB01F58123585 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				044CEE3C54B7CC45084A851F /* Pods-ClassBook.debug.xcconfig */,
+				72668B5A7C045826ECD009D0 /* Pods-ClassBook.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		94A0C7424DA09155AA74EA1C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF188E431CCD30E0E5711B4A /* libPods-ClassBook.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +150,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18795DF01B618D3A0017A390 /* Build configuration list for PBXNativeTarget "ClassBook" */;
 			buildPhases = (
+				DEA71027CF10E3D0DA0976ED /* Check Pods Manifest.lock */,
 				18795DC91B618D3A0017A390 /* Sources */,
 				18795DCA1B618D3A0017A390 /* Frameworks */,
 				18795DCB1B618D3A0017A390 /* Resources */,
+				1D176B5D05E536E44AC983E3 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,6 +239,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1D176B5D05E536E44AC983E3 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ClassBook/Pods-ClassBook-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DEA71027CF10E3D0DA0976ED /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		18795DC91B618D3A0017A390 /* Sources */ = {
@@ -347,6 +406,7 @@
 		};
 		18795DF11B618D3A0017A390 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 044CEE3C54B7CC45084A851F /* Pods-ClassBook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ClassBook/Info.plist;
@@ -357,6 +417,7 @@
 		};
 		18795DF21B618D3A0017A390 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72668B5A7C045826ECD009D0 /* Pods-ClassBook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ClassBook/Info.plist;
@@ -418,6 +479,7 @@
 				18795DF21B618D3A0017A390 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18795DF31B618D3A0017A390 /* Build configuration list for PBXNativeTarget "ClassBookTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +488,7 @@
 				18795DF51B618D3A0017A390 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
