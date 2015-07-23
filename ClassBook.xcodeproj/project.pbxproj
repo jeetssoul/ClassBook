@@ -15,6 +15,8 @@
 		18795DDE1B618D3A0017A390 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18795DDD1B618D3A0017A390 /* Images.xcassets */; };
 		18795DE11B618D3A0017A390 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18795DDF1B618D3A0017A390 /* LaunchScreen.xib */; };
 		18795DED1B618D3A0017A390 /* ClassBookTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18795DEC1B618D3A0017A390 /* ClassBookTests.m */; };
+		187EE0161B619A60009973E6 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 187EE0151B619A60009973E6 /* Person.m */; };
+		187EE0191B619CED009973E6 /* PeopleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 187EE0181B619CED009973E6 /* PeopleTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,10 @@
 		18795DE61B618D3A0017A390 /* ClassBookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClassBookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18795DEB1B618D3A0017A390 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18795DEC1B618D3A0017A390 /* ClassBookTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassBookTests.m; sourceTree = "<group>"; };
+		187EE0141B619A60009973E6 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		187EE0151B619A60009973E6 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		187EE0171B619CED009973E6 /* PeopleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleTableViewController.h; sourceTree = "<group>"; };
+		187EE0181B619CED009973E6 /* PeopleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleTableViewController.m; sourceTree = "<group>"; };
 		72668B5A7C045826ECD009D0 /* Pods-ClassBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClassBook.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClassBook/Pods-ClassBook.release.xcconfig"; sourceTree = "<group>"; };
 		AF188E431CCD30E0E5711B4A /* libPods-ClassBook.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ClassBook.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -90,12 +96,16 @@
 			children = (
 				18795DD41B618D3A0017A390 /* AppDelegate.h */,
 				18795DD51B618D3A0017A390 /* AppDelegate.m */,
+				187EE0171B619CED009973E6 /* PeopleTableViewController.h */,
+				187EE0181B619CED009973E6 /* PeopleTableViewController.m */,
 				18795DD71B618D3A0017A390 /* ViewController.h */,
 				18795DD81B618D3A0017A390 /* ViewController.m */,
 				18795DDA1B618D3A0017A390 /* Main.storyboard */,
 				18795DDD1B618D3A0017A390 /* Images.xcassets */,
 				18795DDF1B618D3A0017A390 /* LaunchScreen.xib */,
 				18795DD01B618D3A0017A390 /* Supporting Files */,
+				187EE0141B619A60009973E6 /* Person.h */,
+				187EE0151B619A60009973E6 /* Person.m */,
 			);
 			path = ClassBook;
 			sourceTree = "<group>";
@@ -278,8 +288,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				187EE0191B619CED009973E6 /* PeopleTableViewController.m in Sources */,
 				18795DD91B618D3A0017A390 /* ViewController.m in Sources */,
 				18795DD61B618D3A0017A390 /* AppDelegate.m in Sources */,
+				187EE0161B619A60009973E6 /* Person.m in Sources */,
 				18795DD31B618D3A0017A390 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
