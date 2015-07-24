@@ -8,6 +8,7 @@
 
 #import "PeopleTableViewController.h"
 #import "Person.h"
+#import "PersonDetailViewController.h"
 
 @interface PeopleTableViewController ()
 
@@ -18,6 +19,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(loadDetailPersonalView:)
+                                                 name:@"Person Selected"
+                                               object:nil];
+    
     self.people = [[NSMutableArray alloc] init];
     [self populatePeople];
     
@@ -64,6 +71,14 @@
 
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    Person *person = [self.people objectAtIndex:indexPath.row];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"Person Selected" object:person];
+    NSLog(@"The user selected: %@", person.firstName);
+    
+}
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -99,15 +114,35 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void) loadDetailPersonalView: (NSNotification *) notification
+{
+    //PersonDetailViewController *personDVC = [[PersonDetailViewController alloc] init];
+    
+    PersonDetailViewController *controllerobj = [self.storyboard instantiateViewControllerWithIdentifier:@"PersonDetail"];
+    controllerobj.person = notification.object;
+    [self.navigationController pushViewController:controllerobj animated:YES];
+    [self presentViewController:controllerobj animated:YES completion:nil];
+    
 }
-*/
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSLog(@"prepareForSegue: %@", segue.identifier);
+    /*
+    if ([segue.identifier isEqualToString:@"Happy"])
+    {
+        [segue.destinationViewController setHappiness:100];
+    }
+    else if ([segue.identifier isEqualToString:@"Sad"])
+    {
+        [segue.destinationViewController setHappiness:0];
+    }*/
+}
 
 
 -(void) populatePeople
@@ -135,7 +170,7 @@
     
     myPerson = Person.new;
     myPerson.firstName = @"Whil";
-    myPerson.lastName = @"Relifod";
+    myPerson.lastName = @"Reliford";
     myPerson.address = @"2121 Avenue Of the Stars";
     myPerson.city = @"Los Angeles";
     myPerson.state = @"CA";
