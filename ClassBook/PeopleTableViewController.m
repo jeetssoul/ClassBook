@@ -9,10 +9,13 @@
 #import "PeopleTableViewController.h"
 #import "Person.h"
 #import "PersonDetailViewController.h"
+#import "DataManager.h"
 
 @interface PeopleTableViewController ()
 
-@property (nonatomic, strong) NSMutableArray *people;
+//@property (nonatomic, strong) NSArray *people;
+@property (nonatomic, strong) NSArray *people;
+
 @end
 
 @implementation PeopleTableViewController
@@ -20,13 +23,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    DataManager *dataManager = [DataManager sharedInstance];
+    
+    self.people = dataManager.fetchPeopleFromPlist; //[[DataManager alloc]initWithArray:dataManager.fetchPeopleFromPlist];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(loadDetailPersonalView:)
                                                  name:@"Person Selected"
                                                object:nil];
     
-    self.people = [[NSMutableArray alloc] init];
-    [self populatePeople];
+    //self.people = [[NSMutableArray alloc] init];
+    //[self populatePeople];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -129,11 +135,11 @@
 }
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-
+/*
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     NSLog(@"prepareForSegue: %@", segue.identifier);
-    /*
+    
     if ([segue.identifier isEqualToString:@"Happy"])
     {
         [segue.destinationViewController setHappiness:100];
@@ -141,41 +147,7 @@
     else if ([segue.identifier isEqualToString:@"Sad"])
     {
         [segue.destinationViewController setHappiness:0];
-    }*/
+    }
 }
-
-
--(void) populatePeople
-{
-    Person *myPerson = Person.new; //[[Person alloc] init];
-    myPerson.firstName = @"Jitender";
-    myPerson.lastName = @"Badlani";
-    myPerson.address = @"2121 Avenue Of the Stars";
-    myPerson.city = @"Los Angeles";
-    myPerson.state = @"CA";
-    myPerson.zip = @"90067";
-    myPerson.mobile = @"6517348640";
-    [self.people addObject:myPerson];
-    myPerson = nil;
-    
-    myPerson = Person.new;
-    myPerson.firstName = @"Ralph";
-    myPerson.lastName = @"G";
-    myPerson.address = @"2121 Avenue Of the Stars";
-    myPerson.city = @"Los Angeles";
-    myPerson.state = @"CA";
-    myPerson.zip = @"90067";
-    myPerson.mobile = @"3103694132";
-    [self.people addObject:myPerson];
-    
-    myPerson = Person.new;
-    myPerson.firstName = @"Whil";
-    myPerson.lastName = @"Reliford";
-    myPerson.address = @"2121 Avenue Of the Stars";
-    myPerson.city = @"Los Angeles";
-    myPerson.state = @"CA";
-    myPerson.zip = @"90067";
-    myPerson.mobile = @"3103694132";
-    [self.people addObject:myPerson];
-}
+*/
 @end
