@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		02C7A2E7A5C421E91F78E90A /* libPods-ClassBook.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF188E431CCD30E0E5711B4A /* libPods-ClassBook.a */; };
+		184A83891B61AEF300557375 /* PersonDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184A83881B61AEF300557375 /* PersonDetailViewController.m */; };
 		18795DD31B618D3A0017A390 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18795DD21B618D3A0017A390 /* main.m */; };
 		18795DD61B618D3A0017A390 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18795DD51B618D3A0017A390 /* AppDelegate.m */; };
 		18795DD91B618D3A0017A390 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18795DD81B618D3A0017A390 /* ViewController.m */; };
@@ -31,6 +32,8 @@
 
 /* Begin PBXFileReference section */
 		044CEE3C54B7CC45084A851F /* Pods-ClassBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClassBook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClassBook/Pods-ClassBook.debug.xcconfig"; sourceTree = "<group>"; };
+		184A83871B61AEF300557375 /* PersonDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonDetailViewController.h; sourceTree = "<group>"; };
+		184A83881B61AEF300557375 /* PersonDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonDetailViewController.m; sourceTree = "<group>"; };
 		18795DCD1B618D3A0017A390 /* ClassBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClassBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18795DD11B618D3A0017A390 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18795DD21B618D3A0017A390 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -98,6 +101,8 @@
 				18795DD51B618D3A0017A390 /* AppDelegate.m */,
 				187EE0171B619CED009973E6 /* PeopleTableViewController.h */,
 				187EE0181B619CED009973E6 /* PeopleTableViewController.m */,
+				184A83871B61AEF300557375 /* PersonDetailViewController.h */,
+				184A83881B61AEF300557375 /* PersonDetailViewController.m */,
 				18795DD71B618D3A0017A390 /* ViewController.h */,
 				18795DD81B618D3A0017A390 /* ViewController.m */,
 				18795DDA1B618D3A0017A390 /* Main.storyboard */,
@@ -288,6 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				184A83891B61AEF300557375 /* PersonDetailViewController.m in Sources */,
 				187EE0191B619CED009973E6 /* PeopleTableViewController.m in Sources */,
 				18795DD91B618D3A0017A390 /* ViewController.m in Sources */,
 				18795DD61B618D3A0017A390 /* AppDelegate.m in Sources */,
